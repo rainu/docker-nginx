@@ -5,6 +5,7 @@ you have to make your own Dockerfile and add a such config-file. This annoys me!
 docker image. Here you can define (config) files inside the environment variables!
 
 The following docker command will create the file:
+
 */etc/nginx/conf.d/global.conf*
 ```
 client_max_body_size 512M;
@@ -15,7 +16,7 @@ client_body_buffer_size 128M;
 docker run \
   -e "CFG_0_FILE=/etc/nginx/conf.d/global.conf" \
   -e "CFG_0_CONTENT_0=client_max_body_size 512M;" \
-  -e "CFG_0_CONTENT_1=client_body_buffer_size 128M;" 
+  -e "CFG_0_CONTENT_1=client_body_buffer_size 128M;" \
   rainu/nginx
 ```
 
